@@ -2,9 +2,9 @@ name: OpenMRS Application
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "*" ]  # Triggers on all branches
   pull_request:
-    branches: [ "main" ]
+    branches: [ "*" ]  # Triggers on all branches
 
 permissions:
   contents: read
@@ -15,10 +15,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout specific branch
+    - name: Checkout code
       uses: actions/checkout@v4
-      with:
-        ref: CICD
     
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
