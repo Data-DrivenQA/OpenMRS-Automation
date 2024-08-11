@@ -4,6 +4,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 import time
+from selenium.webdriver.chrome.options import Options  # Import the Options class
+
 options = Options()
 options.add_argument("--headless")  # Run Chrome in headless mode
 options.add_argument("--no-sandbox")
